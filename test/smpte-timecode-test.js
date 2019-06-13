@@ -20,8 +20,6 @@ describe('Constructor tests', function(){
     });
 
     it ('incorrect initializers throw', function() {
-        expect(function(){Timecode(1,-1)}).to.throwException();
-        expect(function(){Timecode(1,66)}).to.throwException();
         expect(function(){Timecode('dewdew',29.97);}).to.throwException();
         expect(function(){Timecode({w:3},29.97);}).to.throwException();
     });
@@ -97,6 +95,10 @@ describe('Constructor tests', function(){
         expect(Timecode(15000,25).toString()).to.be('00:10:00:00'); 
         expect(Timecode(900000,25).toString()).to.be('10:00:00:00'); 
         expect(Timecode(2999,25).toString()).to.be('00:01:59:24'); 
+    });
+    
+    it ('non-standard frame rates', function() {
+        expect(Timecode('00:10:00:00',28).frameCount).to.be(16800);
     });
 });
 
