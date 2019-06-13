@@ -36,9 +36,8 @@ Timecode = function (timecode, frameRate, dropFrame) {...};
 clock would have with a given framerate. Month, date and
 year discarded.
 
-- `frameRate`: number, optional  
-one of 23.976, 24, 25, 29.97, 30, 50, 59.94, or 60 is expected. 
-29.97 is assumed if the parameter is omitted.
+- `frameRate`: number
+Required video frame rate.
 
 - `dropFrame`: boolean, optional  
 whether the timecode is using drop-frame or non-drop-frame mode.
