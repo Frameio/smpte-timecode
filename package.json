@@ -1,6 +1,6 @@
 {
-  "name": "smpte-timecode",
-  "version": "1.2.3",
+  "name": "@frameio/smpte-timecode",
+  "version": "1.2.3-fork.0",
   "description": "JavaScript implementation of SMPTE timecode type",
   "main": "smpte-timecode.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CrystalComputerCorp/smpte-timecode.git"
+    "url": "git+https://github.com/Frameio/smpte-timecode.git"
   },
   "keywords": [
     "SMPTE",
