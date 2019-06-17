@@ -59,7 +59,9 @@ describe('Constructor tests', function(){
         expect(t.frameRate).to.be(29.97);
         expect(t.dropFrame).to.be(true);
         expect(Timecode(1,29.97).dropFrame).to.be(true);
+        expect(Timecode(1,30000/1001).dropFrame).to.be(true);
         expect(Timecode(1,59.94).dropFrame).to.be(true);
+        expect(Timecode(1,60000/1001).dropFrame).to.be(true);
         expect(Timecode(1,25).dropFrame).to.be(false);
     });
 
