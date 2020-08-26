@@ -33,8 +33,8 @@
         }
         else if (typeof timeCode === 'string') {
             // pick it apart
-            var parts = timeCode.match('^([012]\\d):(\\d\\d):(\\d\\d)(:|;|\\.)(\\d\\d)$');
-            if (!parts) throw new Error("Timecode string expected as HH:MM:SS:FF or HH:MM:SS;FF");
+            var parts = timeCode.match('^([012]\\d)[:;](\\d\\d)[:;](\\d\\d)(:|;|\\.)(\\d\\d)$');
+            if (!parts) throw new Error("Timecode string expected as HH:MM:SS:FF or HH:MM:SS;FF or HH;MM;SS;FF");
             this.hours = parseInt(parts[1]);
             this.minutes = parseInt(parts[2]);
             this.seconds = parseInt(parts[3]);

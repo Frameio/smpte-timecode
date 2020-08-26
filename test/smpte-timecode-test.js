@@ -102,6 +102,13 @@ describe('Constructor tests', function(){
     it ('non-standard frame rates', function() {
         expect(Timecode('00:10:00:00',28).frameCount).to.be(16800);
     });
+
+    it ('parses semicolon-delimited timecodes', () => {
+        const tc = Timecode('00;10;00;23', 29.97);
+        expect(tc.frameCount).to.be(18005);
+        expect(tc.dropFrame).to.be(true);
+        expect(tc.toString()).to.be('00:10:00;23');
+    });
 });
 
 describe('String conversions', function(){
